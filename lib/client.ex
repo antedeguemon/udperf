@@ -22,7 +22,6 @@ defmodule Udperf.Client do
   end
 
   def handle_info(_, state) do
-    # may render ocasional udp response
     {:noreply, state}
   end
 
