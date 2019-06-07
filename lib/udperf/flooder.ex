@@ -1,5 +1,6 @@
 defmodule Udperf.Flooder do
   use GenServer
+  alias Udperf.Client
 
   def init({address, length, discrete_time}) do
     :timer.send_interval(discrete_time, self(), :flood)
