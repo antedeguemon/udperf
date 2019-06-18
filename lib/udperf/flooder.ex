@@ -15,7 +15,7 @@ defmodule Udperf.Flooder do
   def start_link(address, bandwidth, discrete_time \\ 1) do
     cycles = 1000 / discrete_time
     rate = trunc(bandwidth / cycles)
-    
+
     GenServer.start_link(__MODULE__, {address, rate, discrete_time})
   end
 end
